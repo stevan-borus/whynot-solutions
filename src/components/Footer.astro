@@ -47,6 +47,9 @@ const home = locale === "sr" ? "/" : "/en/";
       <p class="text-xs text-text-secondary">
         &copy; {year} {t.footer.copyright}
       </p>
+      <a href={`mailto:${t.footer.email}`} class="text-xs text-text-secondary hover:text-accent transition-colors">
+        {t.footer.email}
+      </a>
       <p class="text-xs text-text-secondary">
         {t.footer.address}
       </p>

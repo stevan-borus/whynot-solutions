@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://why-not-solutions.com/sitemap-index.xml
