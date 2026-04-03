@@ -1,4 +1,10 @@
 {
+  "seo": {
+    "homeTitle": "WhyNot Solutions — Software Development & IT Consulting",
+    "homeDescription": "WhyNot Solutions is an IT company based in Novi Sad, Serbia, specializing in custom software development and technical consulting. We turn ideas into digital products.",
+    "privacyDescription": "Privacy Policy of WhyNot Solutions — how we collect, use, and store your data.",
+    "termsDescription": "Terms of Service for the WhyNot Solutions website — rights, obligations, and legal information."
+  },
   "nav": {
     "about": "About",
     "services": "Services",

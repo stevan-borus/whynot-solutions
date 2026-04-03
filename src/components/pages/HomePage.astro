@@ -14,12 +14,9 @@ interface Props {
 
 const { locale } = Astro.props;
 const t = getTranslations(locale);
-const title = locale === "sr"
-  ? "WhyNot Solutions — Razvoj softvera i IT konsalting"
-  : "WhyNot Solutions — Software Development & IT Consulting";
 ---
 
-<Layout title={title} lang={locale}>
+<Layout title={t.seo.homeTitle} lang={locale} description={t.seo.homeDescription}>
   <Nav />
   <Hero />
   <About />

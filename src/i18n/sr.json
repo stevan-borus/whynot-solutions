@@ -1,4 +1,10 @@
 {
+  "seo": {
+    "homeTitle": "WhyNot Solutions — Razvoj softvera i IT konsalting",
+    "homeDescription": "WhyNot Solutions je IT kompanija iz Novog Sada specijalizovana za razvoj softvera po meri i tehnički konsalting. Pretvaramo ideje u digitalne proizvode.",
+    "privacyDescription": "Politika privatnosti kompanije WhyNot Solutions — kako prikupljamo, koristimo i čuvamo vaše podatke.",
+    "termsDescription": "Uslovi korišćenja sajta WhyNot Solutions — prava, obaveze i pravne informacije."
+  },
   "nav": {
     "about": "O nama",
     "services": "Usluge",
