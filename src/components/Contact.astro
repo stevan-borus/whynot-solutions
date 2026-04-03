@@ -1,0 +1,180 @@
+---
+import { getLocaleFromUrl, getTranslations } from "../i18n/utils";
+
+const locale = getLocaleFromUrl(Astro.url);
+const t = getTranslations(locale);
+---
+
+<section id="contact" class="py-24 md:py-32">
+  <div class="max-w-2xl mx-auto px-6">
+    <div class="mb-12 text-center">
+      <h2 class="text-3xl md:text-4xl font-bold mb-4 text-accent"><span class="font-mono mr-2">//</span>{t.contact.title}</h2>
+      <p class="text-text-secondary">{t.contact.subtitle}</p>
+    </div>
+
+    <form id="contact-form" class="space-y-6" novalidate>
+      <input type="hidden" name="access_key" value="YOUR_WEB3FORMS_KEY" />
+      <input type="checkbox" name="botcheck" class="hidden" />
+
+      <div>
+        <label for="name" class="block text-sm font-medium text-text-secondary mb-2">
+          {t.contact.name}
+        </label>
+        <input
+          type="text"
+          id="name"
+          name="name"
+          class="w-full px-4 py-3 bg-bg-card border border-border rounded-lg text-text-primary placeholder-text-secondary/50 focus:outline-none focus:border-accent transition-colors"
+          placeholder={t.contact.name}
+        />
+        <p class="field-error text-red-400 text-xs mt-1.5 hidden" data-field="name"></p>
+      </div>
+
+      <div>
+        <label for="email" class="block text-sm font-medium text-text-secondary mb-2">
+          {t.contact.email}
+        </label>
+        <input
+          type="text"
+          id="email"
+          name="email"
+          class="w-full px-4 py-3 bg-bg-card border border-border rounded-lg text-text-primary placeholder-text-secondary/50 focus:outline-none focus:border-accent transition-colors"
+          placeholder={t.contact.email}
+        />
+        <p class="field-error text-red-400 text-xs mt-1.5 hidden" data-field="email"></p>
+      </div>
+
+      <div>
+        <label for="message" class="block text-sm font-medium text-text-secondary mb-2">
+          {t.contact.message}
+        </label>
+        <textarea
+          id="message"
+          name="message"
+          rows="5"
+          class="w-full px-4 py-3 bg-bg-card border border-border rounded-lg text-text-primary placeholder-text-secondary/50 focus:outline-none focus:border-accent transition-colors resize-none"
+          placeholder={t.contact.message}
+        ></textarea>
+        <p class="field-error text-red-400 text-xs mt-1.5 hidden" data-field="message"></p>
+      </div>
+
+      <button
+        type="submit"
+        class="w-full px-8 py-4 bg-accent text-bg-primary font-semibold rounded-lg hover:bg-accent-hover transition-colors"
+      >
+        {t.contact.submit}
+      </button>
+
+      <div id="form-status" class="text-center text-sm hidden"></div>
+    </form>
+  </div>
+</section>
+
+<script define:vars={{
+  successMsg: t.contact.success,
+  errorMsg: t.contact.error,
+  validation: t.contact.validation
+}}>
+  const form = document.getElementById("contact-form");
+  const status = document.getElementById("form-status");
+
+  function showError(field, message) {
+    const input = form.querySelector(`[name="${field}"]`);
+    const errorEl = form.querySelector(`.field-error[data-field="${field}"]`);
+    if (input) input.classList.add("border-red-400");
+    if (errorEl) {
+      errorEl.textContent = message;
+      errorEl.classList.remove("hidden");
+    }
+  }
+
+  function clearErrors() {
+    form.querySelectorAll(".field-error").forEach((el) => {
+      el.textContent = "";
+      el.classList.add("hidden");
+    });
+    form.querySelectorAll("input, textarea").forEach((el) => {
+      el.classList.remove("border-red-400");
+    });
+  }
+
+  function clearFieldError(field) {
+    const input = form.querySelector(`[name="${field}"]`);
+    const errorEl = form.querySelector(`.field-error[data-field="${field}"]`);
+    if (input) input.classList.remove("border-red-400");
+    if (errorEl) {
+      errorEl.textContent = "";
+      errorEl.classList.add("hidden");
+    }
+  }
+
+  // Clear individual field errors on input
+  ["name", "email", "message"].forEach((field) => {
+    const input = form.querySelector(`[name="${field}"]`);
+    input?.addEventListener("input", () => clearFieldError(field));
+  });
+
+  function validateForm() {
+    clearErrors();
+    let valid = true;
+    const name = form.querySelector('[name="name"]').value.trim();
+    const email = form.querySelector('[name="email"]').value.trim();
+    const message = form.querySelector('[name="message"]').value.trim();
+
+    if (!name) {
+      showError("name", validation.nameRequired);
+      valid = false;
+    }
+
+    if (!email) {
+      showError("email", validation.emailRequired);
+      valid = false;
+    } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+      showError("email", validation.emailInvalid);
+      valid = false;
+    }
+
+    if (!message) {
+      showError("message", validation.messageRequired);
+      valid = false;
+    }
+
+    return valid;
+  }
+
+  form?.addEventListener("submit", async (e) => {
+    e.preventDefault();
+
+    if (!validateForm()) return;
+
+    const formData = new FormData(form);
+    const btn = form.querySelector('button[type="submit"]');
+    const originalText = btn?.textContent;
+
+    if (btn) btn.textContent = "...";
+
+    try {
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        body: formData,
+      });
+
+      const data = await response.json();
+
+      if (data.success) {
+        status.textContent = successMsg;
+        status.className = "text-center text-sm text-green-400";
+        form.reset();
+        clearErrors();
+      } else {
+        status.textContent = errorMsg;
+        status.className = "text-center text-sm text-red-400";
+      }
+    } catch {
+      status.textContent = errorMsg;
+      status.className = "text-center text-sm text-red-400";
+    } finally {
+      if (btn) btn.textContent = originalText;
+    }
+  });
+</script>

@@ -1,0 +1,30 @@
+---
+import { getLocaleFromUrl, getTranslations } from "../i18n/utils";
+
+const locale = getLocaleFromUrl(Astro.url);
+const t = getTranslations(locale);
+---
+
+<section id="services" class="py-24 md:py-32 relative">
+  <div class="max-w-6xl mx-auto px-6">
+    <div class="mb-16">
+      <h2 class="text-3xl md:text-4xl font-bold text-accent"><span class="font-mono mr-2">//</span>{t.services.title}</h2>
+    </div>
+
+    <div class="space-y-0">
+      {t.services.items.map((service, i) => (
+        <div class="group grid md:grid-cols-[auto_1fr_2fr] gap-6 md:gap-10 items-baseline py-8 border-b border-border hover:border-accent/30 transition-colors">
+          <span class="text-accent font-mono text-sm opacity-50 group-hover:opacity-100 transition-opacity">
+            0{i + 1}
+          </span>
+          <h3 class="text-xl font-semibold group-hover:text-accent transition-colors">
+            {service.title}
+          </h3>
+          <p class="text-text-secondary leading-relaxed">
+            {service.description}
+          </p>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

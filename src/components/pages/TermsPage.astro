@@ -1,0 +1,46 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import Nav from "../Nav.astro";
+import Footer from "../Footer.astro";
+import { getTranslations, type Locale } from "../../i18n/utils";
+
+interface Props {
+  locale: Locale;
+}
+
+const { locale } = Astro.props;
+const t = getTranslations(locale);
+const privacyPath = locale === "sr" ? "/privacy/" : "/en/privacy/";
+---
+
+<Layout title={t.terms.pageTitle} lang={locale}>
+  <Nav />
+  <main class="pt-32 pb-24 max-w-3xl mx-auto px-6">
+    <h1 class="text-3xl md:text-4xl font-bold mb-8 text-accent">
+      <span class="font-mono mr-2">//</span>{t.terms.title}
+    </h1>
+
+    <div class="space-y-6 text-text-secondary leading-relaxed">
+      <p>
+        <strong class="text-text-primary">{t.terms.effectiveDate}</strong> {t.terms.date}
+      </p>
+
+      {t.terms.sections.map((section) => (
+        <>
+          <h2 class="text-xl font-semibold text-text-primary mt-10">{section.title}</h2>
+          {section.hasPrivacyLink ? (
+            <p>{section.content} <a href={privacyPath} class="text-accent hover:underline">{t.terms.privacyLinkText}</a>.</p>
+          ) : (
+            <p>{section.content}</p>
+          )}
+          {section.list && (
+            <ul class="list-disc list-inside space-y-1 ml-4">
+              {section.list.map((item) => <li>{item}</li>)}
+            </ul>
+          )}
+        </>
+      ))}
+    </div>
+  </main>
+  <Footer />
+</Layout>

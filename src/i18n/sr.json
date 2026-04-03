@@ -1,0 +1,179 @@
+{
+  "nav": {
+    "about": "O nama",
+    "services": "Usluge",
+    "contact": "Kontakt"
+  },
+  "hero": {
+    "headline": "Tehnološka rešenja",
+    "headlineAccent": "koja pokreću vaš biznis",
+    "subtext": "WhyNot Solutions — Vaš partner za razvoj softvera i IT konsalting. Pretvaramo ideje u digitalne proizvode.",
+    "cta": "Kontaktirajte nas"
+  },
+  "about": {
+    "title": "O nama",
+    "description": "WhyNot Solutions je IT kompanija specijalizovana za razvoj softvera po meri i tehnički konsalting. Pomažemo kompanijama da digitalizuju svoje poslovanje kroz moderne tehnologije i proverena rešenja.",
+    "values": [
+      {
+        "title": "Kvalitet na prvom mestu",
+        "description": "Svaki projekat tretiramo sa istom pažnjom i posvećenošću, bez obzira na veličinu."
+      },
+      {
+        "title": "Transparentnost",
+        "description": "Otvorena komunikacija i jasni rokovi — uvek znate gde stoji vaš projekat."
+      },
+      {
+        "title": "Moderne tehnologije",
+        "description": "Koristimo najnovije alate i prakse kako bi vaš proizvod bio spreman za budućnost."
+      }
+    ]
+  },
+  "services": {
+    "title": "Usluge",
+    "items": [
+      {
+        "title": "Razvoj softvera",
+        "description": "Web i mobilne aplikacije prilagođene vašim potrebama — od ideje do produkcije."
+      },
+      {
+        "title": "Tehnički konsalting",
+        "description": "Strateško savetovanje za izbor tehnologija, arhitekture i optimizaciju postojećih sistema."
+      },
+      {
+        "title": "Cloud i DevOps",
+        "description": "Postavka cloud infrastrukture, CI/CD pipeline-a i automatizacija procesa."
+      },
+      {
+        "title": "Data inženjering",
+        "description": "Dizajn i implementacija data pipeline-a, skladišta podataka i analitičkih rešenja."
+      }
+    ]
+  },
+  "contact": {
+    "title": "Kontakt",
+    "subtitle": "Imate ideju ili projekat? Javite nam se.",
+    "name": "Ime",
+    "email": "Email",
+    "message": "Poruka",
+    "submit": "Pošaljite poruku",
+    "success": "Poruka je uspešno poslata!",
+    "error": "Došlo je do greške. Pokušajte ponovo.",
+    "validation": {
+      "nameRequired": "Unesite vaše ime.",
+      "emailRequired": "Unesite email adresu.",
+      "emailInvalid": "Unesite validnu email adresu.",
+      "messageRequired": "Unesite poruku."
+    }
+  },
+  "footer": {
+    "copyright": "WhyNot Solutions. Sva prava zadržana.",
+    "address": "Novi Sad, Srbija",
+    "tagline": "Vaš partner za razvoj softvera i IT konsalting.",
+    "linksTitle": "Navigacija",
+    "legalTitle": "Pravne informacije",
+    "privacy": "Politika privatnosti",
+    "terms": "Uslovi korišćenja"
+  },
+  "privacy": {
+    "title": "Politika privatnosti",
+    "pageTitle": "Politika privatnosti — WhyNot Solutions",
+    "effectiveDate": "Datum stupanja na snagu:",
+    "date": "3. april 2026.",
+    "sections": [
+      {
+        "title": "1. Rukovalac podacima",
+        "content": "WhyNot Solutions, registrovana u Republici Srbiji, je rukovalac vašim ličnim podacima. Za sva pitanja u vezi sa obradom podataka, možete nas kontaktirati putem kontakt forme na sajtu."
+      },
+      {
+        "title": "2. Koje podatke prikupljamo",
+        "content": "Putem kontakt forme prikupljamo: ime, email adresu i sadržaj poruke. Ne prikupljamo nikakve druge lične podatke niti koristimo alate za praćenje posetilaca."
+      },
+      {
+        "title": "3. Pravni osnov i svrha obrade",
+        "content": "Vaše podatke obrađujemo na osnovu vašeg pristanka koji dajete slanjem kontakt forme. Podaci se koriste isključivo za odgovaranje na vaš upit."
+      },
+      {
+        "title": "4. Deljenje podataka",
+        "content": "Vaše podatke ne delimo sa trećim stranama, ne prodajemo ih i ne koristimo u marketinške svrhe."
+      },
+      {
+        "title": "5. Čuvanje podataka",
+        "content": "Vaše podatke čuvamo samo onoliko koliko je potrebno za obradu vašeg upita. Nakon toga, podaci se brišu."
+      },
+      {
+        "title": "6. Vaša prava",
+        "content": "U skladu sa Zakonom o zaštiti podataka o ličnosti Republike Srbije, imate pravo na:",
+        "list": [
+          "Pristup vašim ličnim podacima",
+          "Ispravku netačnih podataka",
+          "Brisanje podataka",
+          "Povlačenje pristanka u bilo kom trenutku"
+        ],
+        "afterList": "Za ostvarivanje ovih prava, kontaktirajte nas putem kontakt forme."
+      },
+      {
+        "title": "7. Kolačići",
+        "content": "Ovaj sajt ne koristi kolačiće."
+      },
+      {
+        "title": "8. Izmene politike",
+        "content": "Zadržavamo pravo da izmenimo ovu politiku privatnosti. Sve izmene biće objavljene na ovoj stranici sa ažuriranim datumom stupanja na snagu."
+      },
+      {
+        "title": "9. Merodavno pravo",
+        "content": "Na ovu politiku privatnosti primenjuje se pravo Republike Srbije."
+      }
+    ]
+  },
+  "terms": {
+    "title": "Uslovi korišćenja",
+    "pageTitle": "Uslovi korišćenja — WhyNot Solutions",
+    "effectiveDate": "Datum stupanja na snagu:",
+    "date": "3. april 2026.",
+    "privacyLinkText": "Politikom privatnosti",
+    "sections": [
+      {
+        "title": "1. Opšte odredbe",
+        "content": "Korišćenjem ovog sajta prihvatate ove uslove korišćenja. Sajt je u vlasništvu kompanije WhyNot Solutions, registrovane u Republici Srbiji."
+      },
+      {
+        "title": "2. Opis usluga",
+        "content": "Sajt služi kao informativna prezentacija kompanije WhyNot Solutions i njenih usluga iz oblasti razvoja softvera i tehničkog konsaltinga. Sajt ne pruža mogućnost online kupovine niti registracije korisnika."
+      },
+      {
+        "title": "3. Intelektualna svojina",
+        "content": "Sav sadržaj na Sajtu, uključujući tekst, dizajn, logotipe, grafiku i izvorni kod, je vlasništvo WhyNot Solutions i zaštićen je zakonom o autorskim pravima. Zabranjeno je kopiranje, distribucija ili modifikacija sadržaja bez prethodnog pisanog odobrenja."
+      },
+      {
+        "title": "4. Obaveze korisnika",
+        "content": "Korišćenjem Sajta obavezujete se da nećete:",
+        "list": [
+          "Koristiti Sajt u nezakonite svrhe",
+          "Pokušavati neovlašćen pristup sistemima Sajta",
+          "Slati neželjeni ili zlonamerni sadržaj putem kontakt forme"
+        ]
+      },
+      {
+        "title": "5. Kontakt forma",
+        "content": "Korišćenjem kontakt forme pristajete na obradu podataka u skladu sa našom",
+        "hasPrivacyLink": true
+      },
+      {
+        "title": "6. Ograničenje odgovornosti",
+        "content": "Informacije na Sajtu su informativnog karaktera. WhyNot Solutions ne garantuje tačnost, potpunost ili ažurnost prikazanih informacija. WhyNot Solutions ne snosi odgovornost za eventualnu štetu nastalu korišćenjem informacija sa Sajta."
+      },
+      {
+        "title": "7. Spoljni linkovi",
+        "content": "Sajt može sadržati linkove ka eksternim sajtovima. WhyNot Solutions ne snosi odgovornost za sadržaj ili politike privatnosti tih sajtova."
+      },
+      {
+        "title": "8. Izmene uslova",
+        "content": "Zadržavamo pravo da izmenimo ove uslove korišćenja u bilo kom trenutku. Izmene stupaju na snagu objavljivanjem na ovoj stranici. Nastavak korišćenja Sajta nakon izmena podrazumeva prihvatanje novih uslova."
+      },
+      {
+        "title": "9. Merodavno pravo i nadležnost",
+        "content": "Na ove uslove korišćenja primenjuje se pravo Republike Srbije. Za sve sporove nadležan je sud u Republici Srbiji."
+      }
+    ]
+  }
+}

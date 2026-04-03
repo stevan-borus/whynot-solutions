@@ -1,0 +1,179 @@
+{
+  "nav": {
+    "about": "About",
+    "services": "Services",
+    "contact": "Contact"
+  },
+  "hero": {
+    "headline": "Technology solutions",
+    "headlineAccent": "that drive your business",
+    "subtext": "WhyNot Solutions — Your partner for software development and IT consulting. We turn ideas into digital products.",
+    "cta": "Contact us"
+  },
+  "about": {
+    "title": "About us",
+    "description": "WhyNot Solutions is an IT company specializing in custom software development and technical consulting. We help companies digitalize their operations through modern technologies and proven solutions.",
+    "values": [
+      {
+        "title": "Quality first",
+        "description": "We treat every project with the same care and dedication, regardless of size."
+      },
+      {
+        "title": "Transparency",
+        "description": "Open communication and clear deadlines — you always know where your project stands."
+      },
+      {
+        "title": "Modern technologies",
+        "description": "We use the latest tools and practices to make your product future-proof."
+      }
+    ]
+  },
+  "services": {
+    "title": "Services",
+    "items": [
+      {
+        "title": "Software Development",
+        "description": "Web and mobile applications tailored to your needs — from idea to production."
+      },
+      {
+        "title": "Technical Consulting",
+        "description": "Strategic advice on technology choices, architecture, and optimization of existing systems."
+      },
+      {
+        "title": "Cloud & DevOps",
+        "description": "Cloud infrastructure setup, CI/CD pipelines, and process automation."
+      },
+      {
+        "title": "Data Engineering",
+        "description": "Design and implementation of data pipelines, warehouses, and analytics solutions."
+      }
+    ]
+  },
+  "contact": {
+    "title": "Contact",
+    "subtitle": "Have an idea or project? Get in touch.",
+    "name": "Name",
+    "email": "Email",
+    "message": "Message",
+    "submit": "Send message",
+    "success": "Message sent successfully!",
+    "error": "Something went wrong. Please try again.",
+    "validation": {
+      "nameRequired": "Please enter your name.",
+      "emailRequired": "Please enter your email.",
+      "emailInvalid": "Please enter a valid email address.",
+      "messageRequired": "Please enter a message."
+    }
+  },
+  "footer": {
+    "copyright": "WhyNot Solutions. All rights reserved.",
+    "address": "Novi Sad, Serbia",
+    "tagline": "Your partner for software development and IT consulting.",
+    "linksTitle": "Navigation",
+    "legalTitle": "Legal",
+    "privacy": "Privacy Policy",
+    "terms": "Terms of Service"
+  },
+  "privacy": {
+    "title": "Privacy Policy",
+    "pageTitle": "Privacy Policy — WhyNot Solutions",
+    "effectiveDate": "Effective date:",
+    "date": "April 3, 2026",
+    "sections": [
+      {
+        "title": "1. Data controller",
+        "content": "WhyNot Solutions, registered in the Republic of Serbia, is the controller of your personal data. For any questions regarding data processing, you can contact us through the contact form on our website."
+      },
+      {
+        "title": "2. Information we collect",
+        "content": "Through our contact form, we collect: name, email address, and message content. We do not collect any other personal data or use visitor tracking tools."
+      },
+      {
+        "title": "3. Legal basis and purpose",
+        "content": "We process your data based on your consent, which you provide by submitting the contact form. The data is used solely to respond to your inquiry."
+      },
+      {
+        "title": "4. Data sharing",
+        "content": "We do not share your data with third parties, sell it, or use it for marketing purposes."
+      },
+      {
+        "title": "5. Data retention",
+        "content": "We retain your data only as long as necessary to process your inquiry. After that, the data is deleted."
+      },
+      {
+        "title": "6. Your rights",
+        "content": "In accordance with the Personal Data Protection Act of the Republic of Serbia, you have the right to:",
+        "list": [
+          "Access your personal data",
+          "Correct inaccurate data",
+          "Delete your data",
+          "Withdraw your consent at any time"
+        ],
+        "afterList": "To exercise these rights, contact us through the contact form."
+      },
+      {
+        "title": "7. Cookies",
+        "content": "This website does not use cookies."
+      },
+      {
+        "title": "8. Policy changes",
+        "content": "We reserve the right to modify this privacy policy. All changes will be published on this page with an updated effective date."
+      },
+      {
+        "title": "9. Governing law",
+        "content": "This privacy policy is governed by the laws of the Republic of Serbia."
+      }
+    ]
+  },
+  "terms": {
+    "title": "Terms of Service",
+    "pageTitle": "Terms of Service — WhyNot Solutions",
+    "effectiveDate": "Effective date:",
+    "date": "April 3, 2026",
+    "privacyLinkText": "Privacy Policy",
+    "sections": [
+      {
+        "title": "1. General provisions",
+        "content": "By using this website, you accept these terms of service. The website is owned by WhyNot Solutions, registered in the Republic of Serbia."
+      },
+      {
+        "title": "2. Description of services",
+        "content": "The website serves as an informational presentation of WhyNot Solutions and its services in software development and technical consulting. The website does not provide online purchasing or user registration capabilities."
+      },
+      {
+        "title": "3. Intellectual property",
+        "content": "All content on the website, including text, design, logos, graphics, and source code, is the property of WhyNot Solutions and is protected by copyright law. Copying, distribution, or modification of content without prior written permission is prohibited."
+      },
+      {
+        "title": "4. User obligations",
+        "content": "By using the website, you agree not to:",
+        "list": [
+          "Use the website for unlawful purposes",
+          "Attempt unauthorized access to the website's systems",
+          "Send unsolicited or malicious content through the contact form"
+        ]
+      },
+      {
+        "title": "5. Contact form",
+        "content": "By using the contact form, you consent to the processing of data in accordance with our",
+        "hasPrivacyLink": true
+      },
+      {
+        "title": "6. Limitation of liability",
+        "content": "The information on the website is for informational purposes only. WhyNot Solutions does not guarantee the accuracy, completeness, or timeliness of the information displayed. WhyNot Solutions is not liable for any damages arising from the use of information on the website."
+      },
+      {
+        "title": "7. External links",
+        "content": "The website may contain links to external websites. WhyNot Solutions is not responsible for the content or privacy policies of those websites."
+      },
+      {
+        "title": "8. Changes to terms",
+        "content": "We reserve the right to modify these terms of service at any time. Changes take effect upon publication on this page. Continued use of the website after changes constitutes acceptance of the new terms."
+      },
+      {
+        "title": "9. Governing law and jurisdiction",
+        "content": "These terms of service are governed by the laws of the Republic of Serbia. Any disputes shall be subject to the jurisdiction of the courts in the Republic of Serbia."
+      }
+    ]
+  }
+}

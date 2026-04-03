@@ -1,0 +1,61 @@
+---
+import { getLocaleFromUrl, getTranslations } from "../i18n/utils";
+
+const locale = getLocaleFromUrl(Astro.url);
+const t = getTranslations(locale);
+---
+
+<section id="hero" class="relative min-h-screen flex items-center justify-center pt-16 overflow-hidden">
+  <!-- Grid background -->
+  <div class="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.03)_1px,transparent_1px)] bg-[size:64px_64px]"></div>
+  <!-- Mouse-following glow -->
+  <div id="mouse-glow" class="pointer-events-none absolute w-[500px] h-[500px] rounded-full opacity-0 transition-opacity duration-500" style="background: radial-gradient(circle, rgba(0,212,255,0.12) 0%, rgba(0,212,255,0.04) 40%, transparent 70%);"></div>
+
+  <div class="relative z-10 max-w-4xl mx-auto px-6 text-center">
+    <div class="inline-block mb-6 px-4 py-1.5 border border-border rounded-full">
+      <span class="text-xs font-mono text-text-secondary">
+        why not<span class="text-accent animate-blink">?</span>
+      </span>
+    </div>
+
+    <h1 class="text-4xl md:text-6xl lg:text-7xl font-extrabold leading-tight mb-6">
+      {t.hero.headline}
+      <br />
+      <span class="text-accent">{t.hero.headlineAccent}</span>
+    </h1>
+
+    <p class="text-lg md:text-xl text-text-secondary max-w-2xl mx-auto mb-10">
+      {t.hero.subtext}
+    </p>
+
+    <a
+      href="#contact"
+      class="inline-flex items-center gap-2 px-8 py-4 bg-accent text-bg-primary font-semibold rounded-lg hover:bg-accent-hover transition-colors"
+    >
+      {t.hero.cta}
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+      </svg>
+    </a>
+  </div>
+</section>
+
+<script>
+  const hero = document.getElementById("hero");
+  const glow = document.getElementById("mouse-glow");
+
+  if (hero && glow) {
+    hero.addEventListener("mousemove", (e) => {
+      const rect = hero.getBoundingClientRect();
+      const x = e.clientX - rect.left;
+      const y = e.clientY - rect.top;
+      glow.style.left = `${x - 250}px`;
+      glow.style.top = `${y - 250}px`;
+      glow.style.opacity = "1";
+    });
+
+    hero.addEventListener("mouseleave", () => {
+      glow.style.opacity = "0";
+    });
+  }
+</script>

@@ -1,0 +1,29 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import Nav from "../Nav.astro";
+import Hero from "../Hero.astro";
+import About from "../About.astro";
+import Services from "../Services.astro";
+import Contact from "../Contact.astro";
+import Footer from "../Footer.astro";
+import { getTranslations, type Locale } from "../../i18n/utils";
+
+interface Props {
+  locale: Locale;
+}
+
+const { locale } = Astro.props;
+const t = getTranslations(locale);
+const title = locale === "sr"
+  ? "WhyNot Solutions — Razvoj softvera i IT konsalting"
+  : "WhyNot Solutions — Software Development & IT Consulting";
+---
+
+<Layout title={title} lang={locale}>
+  <Nav />
+  <Hero />
+  <About />
+  <Services />
+  <Contact />
+  <Footer />
+</Layout>

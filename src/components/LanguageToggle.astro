@@ -1,0 +1,48 @@
+---
+import { getLocaleFromUrl } from "../i18n/utils";
+
+const locale = getLocaleFromUrl(Astro.url);
+const label = locale === "sr" ? "EN" : "SR";
+
+// Build the equivalent path in the other language
+const pathname = Astro.url.pathname;
+let otherPath: string;
+
+if (locale === "sr") {
+  // Currently Serbian (no prefix) → add /en/ prefix
+  otherPath = `/en${pathname}`;
+} else {
+  // Currently English (/en/...) → remove /en prefix
+  otherPath = pathname.replace(/^\/en/, "") || "/";
+}
+---
+
+<a
+  id="lang-toggle"
+  href={otherPath}
+  class="text-xs font-mono px-3 py-1.5 border border-border rounded-md text-text-secondary hover:text-accent hover:border-accent transition-colors"
+>
+  {label}
+</a>
+
+<script>
+  const toggle = document.getElementById("lang-toggle");
+  toggle?.addEventListener("click", (e) => {
+    e.preventDefault();
+    const href = toggle.getAttribute("href") || "/";
+    const scrollY = window.scrollY;
+    sessionStorage.setItem("scrollRestore", String(scrollY));
+    window.location.href = href;
+  });
+
+  // Restore scroll after language switch — disable smooth scroll temporarily
+  const saved = sessionStorage.getItem("scrollRestore");
+  if (saved) {
+    sessionStorage.removeItem("scrollRestore");
+    document.documentElement.classList.remove("scroll-smooth");
+    window.scrollTo(0, parseInt(saved, 10));
+    requestAnimationFrame(() => {
+      document.documentElement.classList.add("scroll-smooth");
+    });
+  }
+</script>
