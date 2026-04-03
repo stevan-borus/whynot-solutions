@@ -48,10 +48,6 @@
       {
         "title": "Cloud i DevOps",
         "description": "Postavka cloud infrastrukture, CI/CD pipeline-a i automatizacija procesa."
-      },
-      {
-        "title": "Data inženjering",
-        "description": "Dizajn i implementacija data pipeline-a, skladišta podataka i analitičkih rešenja."
       }
     ]
   },

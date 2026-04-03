@@ -48,10 +48,6 @@
       {
         "title": "Cloud & DevOps",
         "description": "Cloud infrastructure setup, CI/CD pipelines, and process automation."
-      },
-      {
-        "title": "Data Engineering",
-        "description": "Design and implementation of data pipelines, warehouses, and analytics solutions."
       }
     ]
   },
