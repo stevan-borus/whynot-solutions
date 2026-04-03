@@ -43,14 +43,14 @@ const home = locale === "sr" ? "/" : "/en/";
       </div>
     </div>
 
-    <div class="border-t border-border pt-8 flex flex-col md:flex-row items-center justify-between gap-4">
-      <p class="text-xs text-text-secondary">
+    <div class="border-t border-border pt-8 grid md:grid-cols-3 gap-4 text-center">
+      <p class="text-xs text-text-secondary md:text-left">
         &copy; {year} {t.footer.copyright}
       </p>
       <a href={`mailto:${t.footer.email}`} class="text-xs text-text-secondary hover:text-accent transition-colors">
         {t.footer.email}
       </a>
-      <p class="text-xs text-text-secondary">
+      <p class="text-xs text-text-secondary md:text-right">
         {t.footer.address}
       </p>
     </div>
